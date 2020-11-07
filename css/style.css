@@ -133,12 +133,13 @@ section#work{
 }
 
 
-#work .two-::after {
+
+#work .project-image::after {
     content:"";
     position: absolute;
     display: block;
     border-radius: 4px;
-    width:500px;  
+    width:100%;  
     height: 100%;
     background: lightblue;
     left: 0;
@@ -147,12 +148,12 @@ section#work{
     opacity: .5;
 }
 
-#work .two:hover::after {
+#work .project-image:hover::after {
     content:"";
     position: absolute;
     display: block;
     border-radius: 4px;
-    width:500px;
+    width:100%;
     height: 100%;
     background: lightblue;
     left: 0;
@@ -160,40 +161,212 @@ section#work{
     opacity: 0;
 }
 
-#work .two .overlap{
-    /* width: 400px; */
-   color:#ddd;
-    padding: 1.5rem;
-    transform: translate(80%, 25%);
-    background:var(--box);
-    border-radius: 4px;
-    margin: 10px 0;
-    z-index: 100;
-}
 
-#work .two{
+
+
+
+/* ==========Testing Output =================== */
+.card{
+    display: flex;
+    height: 300px;
+    flex-direction: row;
+    /* justify-content: center; */
     position: relative;
-    padding: 1rem;
-    width: 500px;
-     background: url(/images/one.jpg) center/cover no-repeat; 
-     border-radius: 4px;
-     height: 250px;
+    margin: 0 auto 0 auto;
+   max-width: 80%;
+
 }
 
-#work  .project-name{
+.card .image-side img{
+  width: 100%;
+    height:250px; 
+}
+.card .info{
+    border: 1px solid salmon;
+    padding: 0;
+    
+}
+.card .describtion{
+    background:rgba(23, 42, 69, 0.705);
     position: absolute;
-    right: -40%;
-    top: -10px;
-    color:var(--blue);
+    top: 50px;
+    left: 0%;
+    padding:  1rem;
+    width: 100%;
+    min-height: 60%;
+
 }
 
-#work .icons{
-    margin-top: 10px;
-    position: absolute;
-    right: -40%;
-    /* top: 10px; */
-    color:var(--blue);
+.card .link-tools{
+    z-index: 100;
+    font-size: .8rem;
+    
 }
+
+.card .tools{
+ position: absolute;
+    bottom: 20px;
+    right: 5px; 
+}
+.card .link{
+ position: absolute;
+    bottom: 20px;
+    left: 5px; 
+}
+.card .project-title{
+    position: absolute; 
+    top: 10px;
+    right: 5px; 
+    font-size: .8rem;
+
+
+}
+
+
+
+/* @media */
+
+@media only screen and (min-width:770px){
+    .card{
+   /* display: flex; */
+        height: 320px;
+        position: relative;
+        margin: 0 auto 0 auto;
+        max-width: 80%;
+    }
+    
+    .card .image-side img{
+        width:65%;
+        height:300px; 
+        border-radius:4px;
+      }
+
+      .card .info{
+        min-width: 250px;
+        padding: 0;
+
+    }
+
+  .info .describtion{
+        position: absolute;
+        min-height: 80px;
+        max-width: 80%;
+        top: 15%;
+        left: 20%;
+        /* padding: 0 1rem;    */
+        transform: translateY(50%);
+        /* background: lightcoral; */
+        /* z-index: 200; */
+        border-radius:4px;
+    
+    }
+
+    .card .tools{
+        position: absolute;
+        bottom: 70px;
+        right: 5px;
+    }
+    .card .project-title{
+        position: absolute;
+        top: 50px;
+        right: 5px;
+    
+    }
+
+    .card .tools{
+        position: absolute;
+        bottom: 70px;
+        right: 5px;
+    }
+
+    .card .link{
+        position: absolute;
+           bottom: 40px;
+           left: 80%; 
+           padding: 0 10px;
+           /* display: none; */
+       }
+       .card .link i{
+        margin-top: 20px;
+        padding: 0 5px;
+        font-size: 1.2rem;
+    }
+    .card .project-title{
+        position: absolute;
+        top: 30px;
+        right: 5px;
+    
+    }
+    .card .project-title h3{
+        padding: .3rem;
+    }
+
+
+/* =========After Effect ============= */
+
+#work .project-image::after {
+    content:"";
+    position: absolute;
+    display: block;
+    border-radius: 4px;
+    max-width:65%;  
+    height: 95%;
+    background: lightblue;
+    left: 0;
+    top:0;
+    transition: 1s ease-in-out;
+    opacity: .5;
+}
+
+#work .project-image:hover::after {
+    content:"";
+    position: absolute;
+    display: block;
+    border-radius: 4px;
+    /* width:100%;
+    height: 100%; */
+    background: lightblue;
+    left: 0;
+    top:0;
+    opacity: 0;
+}
+
+
+
+}
+
+
+@media only screen and (min-width: 1000px){
+    .card .link{
+        position: absolute;
+           bottom: 24%;
+           left: 65%; 
+           /* padding: 0 5px; */
+           /* display: none; */
+       }
+
+       .card .link i{
+        margin-top: 20px;
+        padding: 0 5px;
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+
+
+/* ===============End Testing =================== */
+
+
+
+
+
+
+
+
+
 
 /* ============Footer Area =============== */
 
@@ -236,23 +409,4 @@ footer .last-part{
 
 
 
-/* ===========Media Query  =========*/
-@media only screen and (max-width:900px){
-    #work .two .overlap{
-        transform: translateX(50%);
-    }
-  
-}
-@media only screen and (max-width:860px){
-    #work .two .overlap{
-        transform: translateX(30%);
-    }
-  
-}
-@media only screen and (max-width:650px){
-   
-    #work .two .overlap{
-        transform: translateY(100%);
-        background:lightgreen;
-    }
-}
+
