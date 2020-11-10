@@ -15,6 +15,8 @@
     --text:#CCD6F6;
     --blue:#03A9F4;
     --lightblue:rgba(3, 168, 244, 0.274);
+    --darker-grey:#5A6885;
+    --dark-grey:#929EBC;
 }
 
 
@@ -29,7 +31,7 @@ body{
     flex-direction: column;
     justify-content: space-around;
     align-items:center;
-    max-width: 80%;
+    max-width: 86%;
 }
 
 header nav{
@@ -358,6 +360,105 @@ section#work{
 
 
 /* ===============End Testing =================== */
+
+
+
+
+/* ===============Other projects =================== */
+
+section.other-projects{
+   display: flex;
+   /* justify-content: center; */
+   flex-direction: column;
+}
+
+.other-projects .box{
+    background:var(--box);
+    padding: 2rem;
+    border-radius: 6px;
+    width:100%;
+    margin: 10px;
+}
+
+
+.other-projects .icons{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.icons .fa-folder{
+    color:var(--blue);
+}
+.other-projects .title{
+    padding: .2rem 0;
+}
+.other-projects p{
+    padding: .8rem 0;
+
+}
+
+.box .describtion{
+    color:var(--dark-grey)
+}
+
+.box .tools{
+    color: var(--darker-grey);
+}
+
+
+
+
+/* Media Query for Other projects */
+@media only screen and (min-width:630px){
+    section.other-projects{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+       
+     }
+     .other-projects .box{
+         max-width: 240px;
+     }
+     
+
+}
+
+@media only screen and (min-width:980px){
+    section.other-projects{
+        display: flex;
+        flex-direction: row;
+        /* max-width: 60%; */
+       
+     }
+     .other-projects .box{
+         width: 280px;
+     }
+     
+
+
+
+     .main{
+        display: flex;
+        margin: 0 auto 0 auto;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items:center;
+        max-width: 80%;
+    }
+
+}
+
+
+
+
+
+
+/* ===============End Other projects =================== */
+
 
 
 
